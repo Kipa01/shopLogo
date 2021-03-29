@@ -1,0 +1,149 @@
+.footer {
+   margin-top: 55px;
+   &__body {
+      display: flex;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #dadada;
+      @media (max-width: 990px) {
+         flex-wrap: wrap;
+      }
+   }
+   &__col {
+      flex-basis: 50%;
+      justify-content: space-between;
+      @media (max-width: 990px) {
+         flex-basis: 100%;
+         &:first-child {
+            margin-bottom: 20px;
+         }
+      }
+   }
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+   }
+}
+
+.info-footer {
+   &__body {
+      display: flex;
+      @media (max-width: 768px) {
+         flex-wrap: wrap;
+      }
+   }
+   &__col {
+      &:first-child {
+         flex: 0 0 163px;
+         margin-right: 50px;
+         @media (max-width: 768px) {
+            flex: 0 1 100%;
+            text-align: center;
+            margin: 0px 0px 0px 0px;
+         }
+      }
+   }
+   &__logo {
+      display: block;
+      margin-bottom: 25px;
+      img {
+         max-width: 100%;
+      }
+   }
+   &__phones {
+      padding-left: 35px;
+      position: relative;
+      &:before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         display: block;
+         width: 19px;
+         height: 25px;
+         background: url("../images/icons/footer/phone.png") no-repeat center;
+      }
+      @media (max-width: 768px) {
+         display: inline-block;
+      }
+   }
+   &__phone {
+      color: #333333;
+      font-weight: 900;
+      text-transform: uppercase;
+      display: block;
+      line-height: 22px;
+   }
+}
+
+.delivery-footer {
+   &__title {
+      color: #999999;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.35px;
+      margin-bottom: 30px;
+      @media (max-width: 768px) {
+         margin-bottom: 20px;
+      }
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px 50px -10px;
+      padding-right: 30px;
+      @media (max-width: 768px) {
+         margin: 0px 0px 0px 0px;
+         padding: 0px 0px 0px 0px;
+      }
+   }
+   &__item {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      img {
+         max-width: 100%;
+      }
+   }
+   @media (max-width: 768px) {
+      margin-top: 15px;
+   }
+}
+
+.widgets-footer {
+   &__body {
+      display: flex;
+      @media (max-width: 990px) {
+         justify-content: center;
+      }
+      @media (max-width: 590px) {
+         flex-wrap: wrap;
+      }
+   }
+   @media (max-width: 990px) {
+      margin-left: -13px;
+   }
+}
+
+.bottom-footer {
+   &__copy {
+      color: #999999;
+      font-size: 12px;
+      font-weight: 300;
+   }
+   &__social {
+      display: flex;
+      align-items: center;
+   }
+}
+
+.social-footer {
+   &__item {
+      margin-right: 15px;
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}

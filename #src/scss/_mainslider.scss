@@ -1,0 +1,213 @@
+.mainslider {
+   margin-bottom: 55px;
+   &__slide {
+      position: relative;
+   }
+
+   &__content {
+      position: relative;
+      z-index: 2;
+      padding: 20px 35px 58px 35px;
+      @media (max-width: 768px) {
+         padding: 10px 0px 40px 20px;
+      }
+      @media (max-width: 520px) {
+         padding: 10px 0px 40px 10px;
+      }
+      @media (max-width: 400px) {
+         padding: 5px 0px 30px 5px;
+      }
+   }
+
+   &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -27.5px;
+      position: relative;
+      z-index: 1;
+      li {
+         width: 55px;
+         height: 55px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         border: 2px solid #ffffff;
+         cursor: pointer;
+         overflow: hidden;
+         & + li {
+            margin-left: 45px;
+            @media (max-width: 768px) {
+               margin-left: 20px;
+            }
+         }
+         &.slick-active {
+            border: 4px solid #ffffff;
+            > button {
+               display: block;
+            }
+            > img {
+               display: none;
+            }
+         }
+         img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+         @media (max-width: 520px) {
+            width: 40px;
+            height: 40px;
+         }
+      }
+      button {
+         color: #fffefe;
+         font-size: 16px;
+         font-weight: 900;
+         line-height: 24px;
+         cursor: pointer;
+         display: none;
+         background-color: #f68038;
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         @media (max-width: 520px) {
+            font-size: 14px;
+         }
+      }
+      @media (max-width: 520px) {
+         margin-top: -20px;
+      }
+   }
+}
+
+.content-mainslider {
+   &__title {
+      color: #333333;
+      font-size: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 43px;
+      margin-bottom: 60px;
+      span {
+         color: #f68038;
+         display: block;
+         @media (max-width: 768px) {
+            display: inline;
+         }
+      }
+      @media (max-width: 768px) {
+         margin-bottom: 25px;
+         font-size: 35px;
+         line-height: 30px;
+      }
+      @media (max-width: 520px) {
+         margin-bottom: 15px;
+         font-size: 30px;
+      }
+      @media (max-width: 400px) {
+         margin-bottom: 5px;
+         font-size: 25px;
+      }
+   }
+
+   &__text {
+      color: #000;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 25px;
+      @media (max-width: 768px) {
+         margin-bottom: 15px;
+      }
+      @media (max-width: 520px) {
+         margin-bottom: 10px;
+         font-size: 12px;
+      }
+   }
+   &__text--1 {
+      color: #f68038;
+      font-size: 18px;
+      @media (max-width: 520px) {
+         font-size: 15px;
+      }
+   }
+   &__text--2 {
+      background: #979797;
+      padding: 2px 5px;
+      color: #fff;
+      display: inline-block;
+      @media (max-width: 520px) {
+         padding: 1px 4px;
+      }
+   }
+   &__text--3 {
+      color: #979797;
+   }
+
+   &__footer {
+      text-align: center;
+   }
+
+   &__price {
+      font-size: 36px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      @media (max-width: 768px) {
+         font-size: 28px;
+         margin-bottom: 15px;
+      }
+      @media (max-width: 520px) {
+         font-size: 20px;
+         margin-bottom: 5px;
+      }
+   }
+
+   &__btn {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 5px 40px 5px 20px;
+      border: 3px solid #ffffff;
+      border-radius: 20px;
+      position: relative;
+      transition: 0.2s linear;
+      &:after {
+         content: "";
+         position: absolute;
+         right: 13px;
+         top: 50%;
+         transform: translateY(-50%);
+         display: block;
+         width: 14px;
+         height: 14px;
+         background: url("../images/icons/mainslider/mainslider-btn-arrow.png") no-repeat center;
+         @media (max-width: 520px) {
+            width: 12px;
+            height: 12px;
+            right: 7px;
+         }
+      }
+      @media (max-width: 520px) {
+         font-size: 12px;
+         padding: 4px 25px 4px 15px;
+      }
+   }
+}

@@ -1,0 +1,238 @@
+.page {
+   flex: 1 1 auto;
+   &__container {
+      @media (min-width: 991px) {
+         display: flex;
+      }
+   }
+   &__side {
+      flex: 0 0 260px;
+      @media (max-width: 990px) {
+         margin-bottom: 10px;
+      }
+   }
+   &__menu {
+      background: url("../images/aside/aside-bg.jpg") top center;
+      @media (min-width: 991px) {
+         margin-bottom: 40px;
+      }
+   }
+   &__content {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0px 0px 0px 30px;
+      @media (max-width: 990px) {
+         padding: 0;
+      }
+   }
+}
+
+.item-product {
+   padding: 15px;
+   border: 1px solid #f5f5f5;
+   position: relative;
+   overflow: hidden;
+   &__label {
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      background-color: #fd8424;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 5px;
+   }
+   &__body {
+      padding: 0 5px;
+   }
+   &__image {
+      height: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      img {
+         max-width: 100%;
+         max-height: 175px;
+      }
+   }
+   &__title {
+      color: #36949f;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+      display: block;
+      margin-bottom: 5px;
+      span {
+         font-weight: 900;
+         display: block;
+      }
+      @media (min-width: 990px) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+   &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+   &__oldprice {
+      flex: 1 1 100%;
+      text-align: right;
+      color: #999999;
+      font-size: 18px;
+      font-weight: 300;
+      text-decoration: line-through;
+   }
+   &__price {
+      color: #333333;
+      font-size: 24px;
+      font-weight: 900;
+   }
+   &__hover {
+      position: absolute;
+      width: 100%;
+      left: -110%;
+      top: 0;
+      border: 5px solid #f68038;
+      background-color: rgba(0, 0, 0, 0.84);
+      padding: 20px 15px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: 0.2s linear;
+   }
+   @media (min-width: 991px) {
+      &:hover {
+         .item-product__hover {
+            left: 0;
+         }
+      }
+   }
+}
+
+.news-side {
+   margin-bottom: 30px;
+   &__item {
+      margin-bottom: 45px;
+   }
+
+   &__label {
+      color: #333333;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 18px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 22px;
+      transition: 0.2s linear;
+      @media (min-width: 991px) {
+         &:hover {
+            color: #fd8322;
+         }
+      }
+   }
+
+   &__content {
+      display: flex;
+   }
+
+   &__date {
+      color: #d8d8d8;
+      font-size: 18px;
+      font-weight: 300;
+      span {
+         font-weight: 900;
+         font-size: 24px;
+         display: block;
+         margin-bottom: 3px;
+      }
+   }
+   &__text {
+      color: #666666;
+      padding-left: 15px;
+      font-size: 12px;
+      font-weight: 400;
+   }
+}
+
+.reviews-side {
+   &__item {
+      display: block;
+      margin-bottom: 20px;
+      @media (min-width: 991px) {
+         &:hover {
+            .reviews-side {
+               &__author {
+                  color: #1ab9ce;
+               }
+
+               &__date {
+                  color: #1ab9ce;
+               }
+
+               &__body {
+                  background-color: #1ab9ce;
+               }
+
+               &__text {
+                  color: #ffffff;
+                  &:before {
+                     color: #64deee;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+   }
+
+   &__author {
+      color: #333333;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition: 0.2s linear;
+   }
+
+   &__date {
+      color: #999999;
+      font-size: 12px;
+      font-weight: 300;
+      transition: 0.2s linear;
+   }
+
+   &__body {
+      padding: 15px 12px 20px 30px;
+      transition: 0.2s linear;
+   }
+
+   &__text {
+      position: relative;
+      color: #666666;
+      font-size: 12px;
+      font-weight: 300;
+      padding-left: 5px;
+      transition: 0.2s linear;
+      &:before {
+         content: '"';
+         position: absolute;
+         left: -22px;
+         top: 15px;
+         color: #dadada;
+         font-size: 48px;
+         font-weight: 900;
+         text-transform: uppercase;
+         transition: 0.2s linear;
+      }
+   }
+}

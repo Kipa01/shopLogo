@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+   <title>Logo Корзина</title>
+</head>
+
+<body>
+   @@include('_header.html')
+   <main class="page">
+      <div class="page__container container">
+         @@include('_aside.html')
+         <div class="page__content">
+            @@include('_search.html')
+            <div data-da="page__container,first,990" class="breadcrumbs">
+               <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                     <a href="index.html" class="breadcrumbs__link">
+                        Главная
+                     </a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                     <span>
+                        Корзина
+                     </span>
+                  </li>
+               </ul>
+            </div>
+            <section class="basket">
+               <h2 class="basket__title">
+                  Оформление заказа
+               </h2>
+               <div class="basket__tabs tabs-basket">
+                  <div class="tabs-basket__nav">
+                     <div class="nav-tabs__item active" name-tab="basket-fast">
+                        <span>Быстрый заказ</span>
+                     </div>
+                     <div class="nav-tabs__item" name-tab="basket-courier">
+                        <span>Курьером по москве и мо</span>
+                     </div>
+                     <div class="nav-tabs__item" name-tab="basket-delivery">
+                        <span>Доставка в регионы</span>
+                     </div>
+                  </div>
+                  <div class="tabs-product__body tabs__body">
+                     <div class="tabs__item basket-fast active">
+                        <form action="" class="tabs-product__form">
+
+                        </form>
+                     </div>
+                     <div class="tabs__item basket-courier"></div>
+                     <div class="tabs__item basket-delivery"></div>
+                  </div>
+               </div> -->
+            </section>
+         </div>
+      </div>
+      @@include('_infomenu.html')
+   </main>
+   @@include('_footer.html')
+   @@include('_js.html')
+</body>
+
+</html>

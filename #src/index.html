@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+   <title>Logo</title>
+</head>
+
+<body>
+   @@include('_header.html')
+   <main class="page">
+      <div class="page__container container">
+         @@include('_aside.html')
+         <div class="page__content">
+            @@include('_search.html')
+            @@include('_mainslider.html')
+            @@include('_productsslider.html')
+         </div>
+      </div>
+      @@include('_brands.html')
+      @@include('_textblock.html')
+      @@include('_infomenu.html')
+   </main>
+   @@include('_footer.html')
+   @@include('_js.html')
+</body>
+
+</html>

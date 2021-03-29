@@ -1,0 +1,51 @@
+.breadcrumbs {
+   padding: 15px 0 25px 0;
+   overflow: auto;
+   &__list {
+      display: flex;
+      align-items: center;
+   }
+   &__item {
+      margin-right: 15px;
+      padding-right: 27px;
+      position: relative;
+      white-space: nowrap;
+      &:after {
+         content: "";
+         position: absolute;
+         right: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         display: block;
+         width: 10px;
+         height: 10px;
+         background: url("../images/icons/textblock/text-arrows.png") no-repeat center;
+      }
+      &:last-child {
+         margin-right: 0;
+         padding-right: 0;
+         &:after {
+            display: none;
+         }
+      }
+      span {
+         color: #999999;
+         font-size: 14px;
+         font-weight: 300;
+         line-height: 16px;
+      }
+   }
+   &__link {
+      color: #1ab9ce;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 16px;
+      text-decoration: underline;
+   }
+   @media (max-width: 990px) {
+      padding: 0 0 20px 0;
+   }
+   @media (max-width: 640px) {
+      padding: 7px 0 20px 0;
+   }
+}

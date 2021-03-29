@@ -1,0 +1,284 @@
+//==========ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+
+@font-face {
+	font-family: "Conv_uni_sans_heavy";
+	src: url("../fonts/uni_sans_heavy.eot");
+	src: local("☺"), url("../fonts/uni_sans_heavy.woff") format("woff"),
+		url("../fonts/uni_sans_heavy.ttf") format("truetype"), url("../fonts/uni_sans_heavy.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+//==========/ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+
+//==========ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0.3px;
+	color: #fff;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.slick-list {
+	overflow: hidden;
+}
+
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+
+.btn {
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 900;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: #f68038;
+	padding: 0 20px;
+	height: 39px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.2s linear;
+	@media (min-width: 990px) {
+		&:hover {
+			background-color: #b86029;
+		}
+	}
+}
+
+.side-title {
+	color: #dadada;
+	font-family: Conv_uni_sans_heavy;
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	transition: 0.2s linear;
+	display: block;
+	margin-bottom: 20px;
+	@media (min-width: 991px) {
+		&:hover {
+			color: #1ab9ce;
+		}
+	}
+}
+
+input {
+	border: 1px solid #dadada;
+	height: 31px;
+	background-color: #ffffff;
+	font-size: 12px;
+}
+
+//==========Select==========//
+
+.select-box {
+	display: flex;
+	width: 169px;
+	flex-direction: column;
+	z-index: 3;
+	border: 2px solid #f3f3f3;
+	@media (max-width: 390px) {
+		width: 100%;
+	}
+}
+
+.select-box .options-container {
+	background: #fff;
+	width: 100%;
+	order: 1;
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+.selected {
+	color: #0097ac;
+	font-size: 14px;
+	font-weight: 300;
+	position: relative;
+	order: 0;
+	background: #fff;
+	&.active {
+		&:after {
+			transform: translateY(-50%) rotateX(180deg);
+		}
+	}
+	&:after {
+		content: "";
+		background: url("../images/icons/catalog/select-arrow.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 14px;
+		height: 8px;
+		right: 10px;
+		top: 50%;
+		transform: translate(0%, -50%);
+		transition: all 0.4s;
+	}
+}
+
+.select-box .option,
+.selected {
+	padding: 5px 8px 5px 15px;
+	cursor: pointer;
+}
+
+.select-box label {
+	cursor: pointer;
+	color: #999999;
+	transition: 0.2s linear;
+	@media (min-width: 991px) {
+		&:hover {
+			color: #0097ac;
+		}
+	}
+}
+
+.select-box .option .radio {
+	display: none;
+}
+
+// select--show
+
+.select-box--show {
+	display: flex;
+	width: 56px;
+	flex-direction: column;
+	border: 2px solid #f3f3f3;
+	z-index: 2;
+}
+
+.select-box--show .options-container--show {
+	background: #fff;
+	width: 100%;
+	order: 1;
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+.selected--show {
+	color: #0097ac;
+	font-size: 14px;
+	font-weight: 300;
+	position: relative;
+	order: 0;
+	background: #fff;
+	&.active {
+		&:after {
+			transform: translateY(-50%) rotateX(180deg);
+		}
+	}
+	&:after {
+		content: "";
+		background: url("../images/icons/catalog/select-arrow.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 14px;
+		height: 8px;
+		right: 3px;
+		top: 50%;
+		transform: translate(0%, -50%);
+		transition: all 0.4s;
+	}
+}
+
+.select-box--show .option--show,
+.selected--show {
+	padding: 5px 8px 5px 15px;
+	cursor: pointer;
+}
+
+.select-box--show label {
+	cursor: pointer;
+	color: #999999;
+	transition: 0.2s linear;
+	@media (min-width: 991px) {
+		&:hover {
+			color: #0097ac;
+		}
+	}
+}
+
+.select-box--show .option--show .radio {
+	display: none;
+}
+
+//==========/Select==========//
+
+//==========/ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+//==========ОСНОВНАЯ СЕТКА==========//
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//==========/ОСНОВНАЯ СЕТКА==========//
+
+//========ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//
+
+@import "_header";
+@import "_home";
+@import "_aside";
+@import "_search";
+@import "_mainslider";
+@import "_productsslider";
+@import "_brands";
+@import "_textblock";
+@import "_infomenu";
+@import "_footer";
+@import "_breadcrumbs";
+@import "_filter";
+@import "_catalog";
+@import "_product";
+
+//========/ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//
